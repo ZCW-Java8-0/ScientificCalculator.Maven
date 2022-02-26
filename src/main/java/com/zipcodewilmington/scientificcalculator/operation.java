@@ -1,7 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
 public class operation {
-
+// START OF BASIC OPERATIONS
     public static double addition(double a, double b) {
         double sum = a + b;
         return sum;
@@ -35,4 +35,6 @@ public class operation {
         double squareR = Math.sqrt(a);
         return squareR;
     }
+
+//END OF BASIC OPERATIONS
 }

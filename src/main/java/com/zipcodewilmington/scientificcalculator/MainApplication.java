@@ -7,16 +7,17 @@ public class MainApplication {
     public static void main(String[] args) {
         Console.println("Welcome to my calculator!");
         String s = Console.getStringInput("Enter requested operation");
-        Integer i = Console.getIntegerInput("Enter an integer");
-        Double d = Console.getDoubleInput("Enter a double.");
-        Double e = Console.getDoubleInput("Enter a double");
+        //Integer i = Console.getIntegerInput("Enter an integer");
+        //Double d = Console.getDoubleInput("Enter a double.");
+        //Double e = Console.getDoubleInput2("Enter a double");
 
         Console.println("The user input %s as the operation", s);
-        Console.println("The user input %f as a integer", i);
-        Console.println("The user input %f as the first number", d);
-        Console.println("The user input %f as the second number", e);
+        //Console.println("The user input %f as a integer", i);
+        //Console.println("The user input %s as the first number", d);
+        //Console.println("The user input %s as the second number", e);
 
-
+        double d = 0;
+        double e = 0;
         double result = 0;
         while (!s.equalsIgnoreCase("end"))
         //end calculator with "end"
@@ -72,8 +73,10 @@ public class MainApplication {
                     result = operation.inverseSign(d);
                     Console.println(Double.toString(result));
                     break;
-                default: Console.println("Please pick a valid command");
-            //use switch
+                default:
+                    Console.println("Please pick a valid command");
+                    break;
+            //infinite loop, need to fix
             }
         }
     }

@@ -1,5 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import com.sun.org.apache.xpath.internal.objects.XNumber;
+
 public class Scientific {
     public static double getSin(Boolean isRadian,double number){
         double radian=number;
@@ -85,5 +87,17 @@ public class Scientific {
             fac *= i;
         }
         return fac;
+    }
+    public static double getAbs(double number){
+        return Math.abs(number);
+    }
+    public static double cube(double number){
+        return Math.pow(number, 3);
+    }
+    public static double madd(double storedValue, double current){
+        return storedValue+current;
+    }
+    public static double msubtract(double storeValue, double current){
+        return storeValue-current;
     }
 }

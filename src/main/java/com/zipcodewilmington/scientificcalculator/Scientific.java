@@ -1,6 +1,48 @@
 package com.zipcodewilmington.scientificcalculator;
 
 public class Scientific {
+    public static double getSin(Boolean isRadian,double number){
+        double radian=number;
+        if (isRadian == false) {
+            radian = Math.toRadians(number);
+        }
+        return Math.sin(radian);
+    }
+    public static double getaSin(Boolean isRadian,double number){
+        double radian=number;
+        if (isRadian == false) {
+            radian = Math.toRadians(number);
+        }
+        return Math.asin(radian);
+    }
+    public static double getCos(Boolean isRadian,double number){
+        double radian=number;
+        if (isRadian == false) {
+            radian = Math.toRadians(number);
+        }
+        return Math.cos(radian);
+    }
+    public static double getaCos(Boolean isRadian,double number){
+        double radian=number;
+        if (isRadian == false) {
+            radian = Math.toRadians(number);
+        }
+        return Math.acos(radian);
+    }
+    public static double getTan(Boolean isRadian,double number){
+        double radian=number;
+        if (isRadian == false) {
+            radian = Math.toRadians(number);
+        }
+        return Math.tan(radian);
+    }
+    public static double getaTan(Boolean isRadian,double number){
+        double radian=number;
+        if (isRadian == false) {
+            radian = Math.toRadians(number);
+        }
+        return Math.atan(radian);
+    }
     public static double getLog (double number){
         return Math.log10(number);
     }

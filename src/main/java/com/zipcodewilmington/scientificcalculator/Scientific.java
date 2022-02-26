@@ -94,10 +94,10 @@ public class Scientific {
     public static double cube(double number){
         return Math.pow(number, 3);
     }
-    public static double madd(double storedValue, double current){
+    public static double mAdd(double storedValue, double current){
         return storedValue+current;
     }
-    public static double msubtract(double storeValue, double current){
+    public static double mSubtract(double storeValue, double current){
         return storeValue-current;
     }
 }

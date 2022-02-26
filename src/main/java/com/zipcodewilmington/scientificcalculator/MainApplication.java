@@ -6,7 +6,9 @@ package com.zipcodewilmington.scientificcalculator;
 public class MainApplication {
     public static void main(String[] args) {
         Console.println("Welcome to my calculator!");
-        String s = Console.getStringInput("Enter requested operation");
+        String s = Console.getStringInput("Enter requested operation [+ for addition] " +
+                "[- for subtraction] [* for multiplication] [/ for division] [sq for square] " +
+                "[sqrt for square root] [exp for exponents] [1/N for inverse number] [-N for inverse sign]");
         //Integer i = Console.getIntegerInput("Enter an integer");
         //Double d = Console.getDoubleInput("Enter a double.");
         //Double e = Console.getDoubleInput2("Enter a double");

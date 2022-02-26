@@ -13,7 +13,7 @@ public class MainApplication {
         Console.println("[+ for addition] [- for subtraction] [* for multiplication]");
         Console.println("[/ for division] [sq for square] [sqrt for square root]");
         Console.println("[exp for exponents] [1/N for inverse number] [-N for inverse sign]");
-        Console.println("[Clear for clear display] ");
+        Console.println("[Current for current number][Change to change current number][Clear for clear display] ");
         String s = Console.getStringInput("Enter requested operation: ");
         //Integer i = Console.getIntegerInput("Enter an integer");
         //Double d = Console.getDoubleInput("Enter a double.");
@@ -75,11 +75,11 @@ public class MainApplication {
                     result = operation.inverseSign(d);
                     Console.println(Double.toString(result));
                     break;
-                case"current":
+                case"Current":
                     currentNum();
                     Console.println(Double.toString(result));
                     break;
-                case"change":
+                case"Change":
                     d = Console.getDoubleInput( "Enter number to change display to:");
                     setNum(d);
                     Console.println(Double.toString(result));

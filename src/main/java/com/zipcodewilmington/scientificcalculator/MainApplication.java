@@ -17,77 +17,81 @@ public class MainApplication {
         String s ="";
 
         boolean onOff = true;
+        d = Console.getDoubleInput("Enter first number:");
+        result = d;
         while (onOff) {
             s = Console.getStringInput("Enter requested operation: ");
             Console.println("The user input %s as the operation", s);
             switch (s) {
                 case "+":
-                    d = Console.getDoubleInput("Enter first number:");
                     e = Console.getDoubleInput("Enter second number:");
                     result = operation.addition(d, e);
                     Console.println(Double.toString(result));
+                    d = result;
                     break;
                 case "-":
-                    d = Console.getDoubleInput("Enter first number:");
                     e = Console.getDoubleInput("Enter second number:");
                     result = operation.subtraction(d, e);
                     Console.println(Double.toString(result));
+                    d = result;
                     break;
                 case "*":
-                    d = Console.getDoubleInput("Enter first number:");
                     e = Console.getDoubleInput("Enter second number:");
                     result = operation.multiplication(d, e);
                     Console.println(Double.toString(result));
+                    d = result;
                     break;
                 case "/":
-                    d = Console.getDoubleInput("Enter first number:");
                     e = Console.getDoubleInput("Enter second number:");
                     if (e == 0) {
                         Console.println("Err");
                     } else {
                         result = operation.divison(d, e);
                         Console.println(Double.toString(result));
+                        d = result;
                     }
                     break;
                 case "sq":
-                    d = Console.getDoubleInput("Enter number to square:");
                     result = operation.square(d);
                     Console.println(Double.toString(result));
+                    d = result;
                     break;
                 case "sqrt":
-                    d = Console.getDoubleInput("Enter number to square root:");
                     result = operation.squareRoot(d);
                     Console.println(Double.toString(result));
+                    d = result;
                     break;
                 case "exp":
-                    d = Console.getDoubleInput("Enter first number:");
                     e = Console.getDoubleInput("Enter second number:");
                     result = operation.exponents(d, e);
                     Console.println(Double.toString(result));
+                    d = result;
                     break;
                 case "1/N":
-                    d = Console.getDoubleInput("Enter number to inverse:");
                     result = operation.inverseNumber(d);
                     Console.println(Double.toString(result));
+                    d = result;
                     break;
                 case "-N":
-                    d = Console.getDoubleInput("Enter number to inverse sign:");
                     result = operation.inverseSign(d);
                     Console.println(Double.toString(result));
+                    d = result;
                     break;
                 //scientific methods
                 case "Current":
                     currentNum();
                     Console.println(Double.toString(result));
+                    d = result;
                     break;
                 case "Change":
-                    d = Console.getDoubleInput("Enter number to change display to:");
                     setNum(d);
                     Console.println(Double.toString(result));
+                    d = result;
                     break;
                 case "Clear":
                     result = 0;
                     Console.println(Double.toString(result));
+                    d = Console.getDoubleInput("Enter new Number:");
                     break;
                 case "Off":
                     onOff = false;

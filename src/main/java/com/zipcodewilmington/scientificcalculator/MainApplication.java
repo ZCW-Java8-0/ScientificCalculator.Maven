@@ -19,9 +19,7 @@ public class MainApplication {
         double d = 0;
         double e = 0;
         double result = 0;
-        while (!s.equalsIgnoreCase("end"))
-        //end calculator with "end"
-        {
+
             switch (s) {
                 case"+":
                     d = Console.getDoubleInput( "Enter first number:");
@@ -59,7 +57,7 @@ public class MainApplication {
                     break;
                 case"exp":
                     d = Console.getDoubleInput( "Enter first number:");
-                    e = Console.getDoubleInput( "Enter first number:");
+                    e = Console.getDoubleInput( "Enter second number:");
                     result = operation.exponents(d,e);
                     Console.println(Double.toString(result));
                     break;
@@ -76,8 +74,6 @@ public class MainApplication {
                 default:
                     Console.println("Please pick a valid command");
                     break;
-            //infinite loop, need to fix
             }
         }
     }
-}

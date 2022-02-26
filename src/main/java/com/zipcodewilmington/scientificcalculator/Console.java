@@ -28,13 +28,4 @@ public class Console {
         double userInput = scanner.nextDouble();
         return userInput;
     }
-
-
-    public static double getDoubleInput2(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        double userInput = scanner.nextDouble();
-        return userInput;
-
-    }
 }

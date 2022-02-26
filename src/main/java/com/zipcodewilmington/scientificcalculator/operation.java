@@ -15,7 +15,11 @@ public class operation {
         return multiply;
     }
     public static double divison( double a, double b) {
-        double divide = a / b;
+        double divide = 0;
+        if (b == 0) System.out.println("Err");
+        else {
+            divide = a / b;
+        }
         return divide;
     }
 }

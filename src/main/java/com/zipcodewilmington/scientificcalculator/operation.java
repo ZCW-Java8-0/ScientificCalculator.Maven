@@ -37,5 +37,17 @@ public class operation {
         return squareR;
     }
 
+    public static double exponents(double a, double b) {
+        double exponent = Math.pow(a, b);
+        return exponent;
+    }
+    public static double inverseNumber(double a) {
+        double inverseN = 1/a;
+        return inverseN;
+    }
+    public static double inverseSign(double a){
+        double inverseS = a * -1;
+        return inverseS;
+    }
 //END OF BASIC OPERATIONS
 }

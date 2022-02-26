@@ -7,7 +7,7 @@ public class operation {
         return sum;
     }
 
-    public static double substraction(double a, double b) {
+    public static double subtraction(double a, double b) {
         double subtract = a - b;
         return subtract;
     }
@@ -31,6 +31,7 @@ public class operation {
         double squared = a * a;
         return squared;
     }
+
     public static double squareRoot(double a) {
         double squareR = Math.sqrt(a);
         return squareR;

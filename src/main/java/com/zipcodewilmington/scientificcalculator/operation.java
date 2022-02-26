@@ -19,9 +19,6 @@ public class operation {
 
     public static double divison(double a, double b) {
         double divide = 0;
-        if (b == 0)
-            Console.println("Err");
-        else
             divide = a / b;
         return divide;
     }

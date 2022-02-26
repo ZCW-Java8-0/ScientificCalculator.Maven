@@ -46,8 +46,11 @@ public class MainApplication {
                 case"/":
                     d = Console.getDoubleInput( "Enter first number:");
                     e = Console.getDoubleInput("Enter second number:");
-                    result = operation.divison(d, e);
-                    Console.println(Double.toString(result));
+                    if (e == 0){Console.println("Err");}
+                        else {
+                        result = operation.divison(d, e);
+                        Console.println(Double.toString(result));
+                    }
                     break;
                 case"sq":
                     d = Console.getDoubleInput( "Enter number to square:");

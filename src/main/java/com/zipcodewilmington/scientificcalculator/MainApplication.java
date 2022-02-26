@@ -62,12 +62,12 @@ public class MainApplication {
                     result = operation.exponents(d,e);
                     Console.println(Double.toString(result));
                     break;
-                case"invN":
+                case"1/N":
                     d = Console.getDoubleInput( "Enter first number:");
                     result = operation.inverseNumber(d);
                     Console.println(Double.toString(result));
                     break;
-                case"invS":
+                case"-N":
                     d = Console.getDoubleInput( "Enter first number:");
                     result = operation.inverseSign(d);
                     Console.println(Double.toString(result));

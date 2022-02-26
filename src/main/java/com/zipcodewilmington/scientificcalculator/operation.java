@@ -19,12 +19,8 @@ public class operation {
 
     public static double divison(double a, double b) {
         double divide = 0;
-        if (b == 0) System.out.println("Err");
-        else {
             divide = a / b;
-        }
         return divide;
-
     }
 
     public static double square(double a) {

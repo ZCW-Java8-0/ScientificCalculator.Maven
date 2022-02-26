@@ -12,9 +12,9 @@ public class MainApplication {
         Double e = Console.getDoubleInput("Enter a double");
 
         Console.println("The user input %s as the operation", s);
-        Console.println("The user input %s as a integer", i);
-        Console.println("The user input %s as the first number", d);
-        Console.println("The user input %s as the second number", e);
+        Console.println("The user input %f as a integer", i);
+        Console.println("The user input %f as the first number", d);
+        Console.println("The user input %f as the second number", e);
 
 
         double result = 0;

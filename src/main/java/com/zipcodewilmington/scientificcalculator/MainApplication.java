@@ -11,10 +11,10 @@ public class MainApplication {
         Double d = Console.getDoubleInput("Enter a double.");
         Double e = Console.getDoubleInput("Enter a double");
 
-        Console.println("The user input %s as a string", s);
+        Console.println("The user input %s as the operation", s);
         Console.println("The user input %s as a integer", i);
-        Console.println("The user input %s as a d", d);
-        Console.println("The user input %s as a e", e);
+        Console.println("The user input %s as the first number", d);
+        Console.println("The user input %s as the second number", e);
 
 
         double result = 0;

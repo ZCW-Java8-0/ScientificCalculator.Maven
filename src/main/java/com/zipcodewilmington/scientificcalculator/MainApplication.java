@@ -23,30 +23,57 @@ public class MainApplication {
         {
             switch (s) {
                 case"+":
-                    d = Console.getDoubleInput( "Enter first number");
-                    e = Console.getDoubleInput("Enter second number");
+                    d = Console.getDoubleInput( "Enter first number:");
+                    e = Console.getDoubleInput("Enter second number:");
                     result = operation.addition(d, e);
                     Console.println(Double.toString(result));
                     break;
                 case"-":
-                    d = Console.getDoubleInput( "Enter first number");
-                    e = Console.getDoubleInput("Enter second number");
+                    d = Console.getDoubleInput( "Enter first number:");
+                    e = Console.getDoubleInput("Enter second number:");
                     result = operation.subtraction(d, e);
                     Console.println(Double.toString(result));
                     break;
                 case"*":
-                    d = Console.getDoubleInput( "Enter first number");
-                    e = Console.getDoubleInput("Enter second number");
+                    d = Console.getDoubleInput( "Enter first number:");
+                    e = Console.getDoubleInput("Enter second number:");
                     result = operation.multiplication(d, e);
                     Console.println(Double.toString(result));
                     break;
                 case"/":
-                    d = Console.getDoubleInput( "Enter first number");
-                    e = Console.getDoubleInput("Enter second number");
+                    d = Console.getDoubleInput( "Enter first number:");
+                    e = Console.getDoubleInput("Enter second number:");
                     result = operation.divison(d, e);
                     Console.println(Double.toString(result));
                     break;
-            //use switch?
+                case"sq":
+                    d = Console.getDoubleInput( "Enter first number:");
+                    result = operation.square(d);
+                    Console.println(Double.toString(result));
+                    break;
+                case"sqrt":
+                    d = Console.getDoubleInput( "Enter first number:");
+                    result = operation.squareRoot(d);
+                    Console.println(Double.toString(result));
+                    break;
+                case"exp":
+                    d = Console.getDoubleInput( "Enter first number:");
+                    e = Console.getDoubleInput( "Enter first number:");
+                    result = operation.exponents(d,e);
+                    Console.println(Double.toString(result));
+                    break;
+                case"invN":
+                    d = Console.getDoubleInput( "Enter first number:");
+                    result = operation.inverseNumber(d);
+                    Console.println(Double.toString(result));
+                    break;
+                case"invS":
+                    d = Console.getDoubleInput( "Enter first number:");
+                    result = operation.inverseSign(d);
+                    Console.println(Double.toString(result));
+                    break;
+                default: Console.println("Please pick a valid command");
+            //use switch
             }
         }
     }

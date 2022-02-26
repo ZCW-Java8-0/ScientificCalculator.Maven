@@ -13,4 +13,11 @@ public class Scientific {
     public static double getInverseNaturalLog (double number){
         return Math.exp(number);
     }
+    public static Integer getFactorial(Integer number){
+        int fac = 1;
+        for (int i=1; i<=number;i++){
+            fac *= i;
+        }
+        return fac;
+    }
 }

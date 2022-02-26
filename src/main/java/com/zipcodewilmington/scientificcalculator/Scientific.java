@@ -43,6 +43,30 @@ public class Scientific {
         }
         return Math.atan(radian);
     }
+    public static Boolean changeTrigCycle(Boolean isRadian){
+        if (isRadian){
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    public static Boolean changeTrig(Boolean isRadian, String changeTo) {
+        if (changeTo.equalsIgnoreCase( "radians")) {
+            if (isRadian){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            if (isRadian) {
+                return false;
+            } else
+                return true;
+        }
+    }
     public static double getLog (double number){
         return Math.log10(number);
     }

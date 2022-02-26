@@ -14,88 +14,90 @@ public class MainApplication {
         Console.println("[/ for division] [sq for square] [sqrt for square root]");
         Console.println("[exp for exponents] [1/N for inverse number] [-N for inverse sign]");
         Console.println("[Current for current number][Change to change current number][Clear for clear display] ");
-        String s = Console.getStringInput("Enter requested operation: ");
-        //Integer i = Console.getIntegerInput("Enter an integer");
-        //Double d = Console.getDoubleInput("Enter a double.");
-        //Double e = Console.getDoubleInput2("Enter a double");
+        String s ="";
 
-        Console.println("The user input %s as the operation", s);
-        //Console.println("The user input %f as a integer", i);
-        //Console.println("The user input %s as the first number", d);
-        //Console.println("The user input %s as the second number", e);
-
+        boolean onOff = true;
+        while (onOff) {
+            s = Console.getStringInput("Enter requested operation: ");
+            Console.println("The user input %s as the operation", s);
             switch (s) {
-                case"+":
-                    d = Console.getDoubleInput( "Enter first number:");
+                case "+":
+                    d = Console.getDoubleInput("Enter first number:");
                     e = Console.getDoubleInput("Enter second number:");
                     result = operation.addition(d, e);
                     Console.println(Double.toString(result));
                     break;
-                case"-":
-                    d = Console.getDoubleInput( "Enter first number:");
+                case "-":
+                    d = Console.getDoubleInput("Enter first number:");
                     e = Console.getDoubleInput("Enter second number:");
                     result = operation.subtraction(d, e);
                     Console.println(Double.toString(result));
                     break;
-                case"*":
-                    d = Console.getDoubleInput( "Enter first number:");
+                case "*":
+                    d = Console.getDoubleInput("Enter first number:");
                     e = Console.getDoubleInput("Enter second number:");
                     result = operation.multiplication(d, e);
                     Console.println(Double.toString(result));
                     break;
-                case"/":
-                    d = Console.getDoubleInput( "Enter first number:");
+                case "/":
+                    d = Console.getDoubleInput("Enter first number:");
                     e = Console.getDoubleInput("Enter second number:");
-                    if (e == 0){Console.println("Err");}
-                        else {
+                    if (e == 0) {
+                        Console.println("Err");
+                    } else {
                         result = operation.divison(d, e);
                         Console.println(Double.toString(result));
                     }
                     break;
-                case"sq":
-                    d = Console.getDoubleInput( "Enter number to square:");
+                case "sq":
+                    d = Console.getDoubleInput("Enter number to square:");
                     result = operation.square(d);
                     Console.println(Double.toString(result));
                     break;
-                case"sqrt":
-                    d = Console.getDoubleInput( "Enter number to square root:");
+                case "sqrt":
+                    d = Console.getDoubleInput("Enter number to square root:");
                     result = operation.squareRoot(d);
                     Console.println(Double.toString(result));
                     break;
-                case"exp":
-                    d = Console.getDoubleInput( "Enter first number:");
-                    e = Console.getDoubleInput( "Enter second number:");
-                    result = operation.exponents(d,e);
+                case "exp":
+                    d = Console.getDoubleInput("Enter first number:");
+                    e = Console.getDoubleInput("Enter second number:");
+                    result = operation.exponents(d, e);
                     Console.println(Double.toString(result));
                     break;
-                case"1/N":
-                    d = Console.getDoubleInput( "Enter number to inverse:");
+                case "1/N":
+                    d = Console.getDoubleInput("Enter number to inverse:");
                     result = operation.inverseNumber(d);
                     Console.println(Double.toString(result));
                     break;
-                case"-N":
-                    d = Console.getDoubleInput( "Enter number to inverse sign:");
+                case "-N":
+                    d = Console.getDoubleInput("Enter number to inverse sign:");
                     result = operation.inverseSign(d);
                     Console.println(Double.toString(result));
                     break;
-                case"Current":
+                //scientific methods
+                case "Current":
                     currentNum();
                     Console.println(Double.toString(result));
                     break;
-                case"Change":
-                    d = Console.getDoubleInput( "Enter number to change display to:");
+                case "Change":
+                    d = Console.getDoubleInput("Enter number to change display to:");
                     setNum(d);
                     Console.println(Double.toString(result));
                     break;
-                case"Clear":
+                case "Clear":
                     result = 0;
                     Console.println(Double.toString(result));
+                    break;
+                case "Off":
+                    onOff = false;
                     break;
                 default:
                     Console.println("Please pick a valid command");
                     break;
             }
         }
+    }
         // Set current number
         public static double setNum(double input){
         result = input;

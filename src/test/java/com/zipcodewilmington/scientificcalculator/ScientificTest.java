@@ -60,6 +60,28 @@ class ScientificTest {
 
     @Test
     void getCosTest1() {
+
+        double expectedResult = 0.43837114678907746;
+        double number = 64;
+        boolean isRadian = false;
+
+        double actualResult = Scientific.getCos(isRadian, number);
+
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    void getCosTest2() {
+
+        double expectedResult = 0.39185723042955;
+        double number = 64;
+        boolean isRadian = true;
+
+        double actualResult = Scientific.getCos(isRadian, number);
+
+        assertEquals(expectedResult, actualResult);
+
     }
 
     @Test

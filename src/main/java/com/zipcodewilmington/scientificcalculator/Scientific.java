@@ -118,22 +118,26 @@ public class Scientific {
         }
     }
     public static String changeBase(double number, int base){
-        int prec =100; //how far past the decimal point the program calculates to
+        int prec =100;
+        //how far past the decimal point the program calculates to.
         BigDecimal bdnumber = new BigDecimal(number);
         BigDecimal baseMultiplier = new BigDecimal(base).pow(prec);
         bdnumber = bdnumber.multiply(baseMultiplier);
+        //creates a large number to convert to int as to keep the decimal values
+        //to use with BigInteger.toString(radix)
         BigInteger numberToInt = bdnumber.toBigInteger();
         StringBuilder newNumber = new StringBuilder(numberToInt.toString(base));
+        //converts to string representation of a given base parameter (radix)
         while (newNumber.length()<prec+1){
             newNumber.insert(0,"0");
-        }
+        } //adding 0's to properly find the location of "."
         newNumber.insert(newNumber.length()-prec,".");
         for (int i= newNumber.length()-1;i>0;i--){
             if (newNumber.charAt(i)=='0')
                 newNumber.deleteCharAt(i);
             else
                 break;
-        } //tidy the number by removing 0's
+        } //tidy the number by removing extra 0's
         return newNumber.toString();
     }
 }

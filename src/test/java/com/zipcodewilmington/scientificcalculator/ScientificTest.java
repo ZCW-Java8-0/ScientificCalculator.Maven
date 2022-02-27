@@ -111,7 +111,29 @@ class ScientificTest {
     }
 
     @Test
-    void getTan() {
+    void getTanTest1() {
+
+        double expectedResult = 11.430052302761348;
+        double number = 85;
+        boolean isRadian = false;
+
+        double actualResult = Scientific.getTan(isRadian, number);
+
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    void getTanTest2() {
+
+        double expectedResult = 0.17887017243876716;
+        double number = 85;
+        boolean isRadian = true;
+
+        double actualResult = Scientific.getTan(isRadian, number);
+
+        assertEquals(expectedResult, actualResult);
+
     }
 
     @Test

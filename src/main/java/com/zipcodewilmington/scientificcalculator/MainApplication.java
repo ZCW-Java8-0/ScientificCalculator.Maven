@@ -17,7 +17,7 @@ public class MainApplication {
         Console.println("Memory Function: M- to subtract from memory value");
         Console.println("! for Factorial, switchUnitsMode to change between radians and degrees");
         Console.println("Radians to switch to radians, Degrees to switch to degrees");
-        Console.println("DisplayUnitsMode to check if in radians or degrees")
+        Console.println("DisplayUnitsMode to check if in radians or degrees");
         Console.println("[Current for current number][Change to change current number][Clear for clear display] ");
         String s ="";
 

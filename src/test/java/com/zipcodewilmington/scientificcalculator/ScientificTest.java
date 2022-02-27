@@ -307,7 +307,27 @@ class ScientificTest {
     }
 
     @Test
-    void getAbs() {
+    void getAbsTest1() {
+
+        double expectedResult = 10;
+        double number = -10;
+
+        double actualResult = Scientific.getAbs(number);
+
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    void getAbsTest2() {
+
+        double expectedResult = 10;
+        double number = 10;
+
+        double actualResult = Scientific.getAbs(number);
+
+        assertEquals(expectedResult, actualResult);
+
     }
 
     @Test

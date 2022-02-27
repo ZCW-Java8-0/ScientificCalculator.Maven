@@ -32,4 +32,5 @@ public class Console {
             double userInput = scanner.nextDouble();
             return userInput;
         }
+
 }

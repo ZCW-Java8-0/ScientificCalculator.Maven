@@ -85,7 +85,29 @@ class ScientificTest {
     }
 
     @Test
-    void getaCos() {
+    void getaCosTest1() {
+
+        double expectedResult = 1.5707963267948966;
+        double number = 0;
+        boolean isRadian = true;
+
+        double actualResult = Scientific.getaCos(isRadian, number);
+
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    void getaCosTest2() {
+
+        double expectedResult = 0.45102681179626236;
+        double number = 0.9;
+        boolean isRadian = true;
+
+        double actualResult = Scientific.getaCos(isRadian, number);
+
+        assertEquals(expectedResult, actualResult);
+
     }
 
     @Test

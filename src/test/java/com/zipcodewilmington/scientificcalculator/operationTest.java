@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 class operationTest {
 
     @Test
-    void addition() {
+    void additionTest1() {
 
         double expectedResult = 19;
         int a = 10;
@@ -17,8 +17,20 @@ class operationTest {
         Assertions.assertEquals(expectedResult, actualResult);
     }
 
+    @Test
+    void additionTest2() {
+
+        double expectedResult = 24;
+        int a = -35;
+        int b = 59;
+
+        double actualResult = operation.addition(a,b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
     @org.junit.jupiter.api.Test
-    void subtraction() {
+    void subtractionTest1() {
 
         double expectedResult = 30;
         int a = 45;
@@ -31,11 +43,37 @@ class operationTest {
     }
 
     @org.junit.jupiter.api.Test
-    void multiplication() {
+    void subtractionTest2() {
+
+        double expectedResult = -5;
+        int a = 8;
+        int b = 13;
+
+        double actualResult = operation.subtraction(a,b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void multiplicationTest1() {
 
         double expectedResult = 90;
         int a = 10;
         int b = 9;
+
+        double actualResult = operation.multiplication(a,b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void multiplicationTest2() {
+
+        double expectedResult = -7;
+        int a = -1;
+        int b = 7;
 
         double actualResult = operation.multiplication(a,b);
 

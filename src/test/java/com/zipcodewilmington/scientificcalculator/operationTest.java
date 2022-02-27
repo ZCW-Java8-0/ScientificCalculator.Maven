@@ -83,12 +83,26 @@ class operationTest {
     @org.junit.jupiter.api.Test
     void exponents() {
 
+        double expectedResult = 117649;
+        int a = 7;
+        int b = 6;
 
+        double actualResult = operation.exponents(a,b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
 
     }
 
     @org.junit.jupiter.api.Test
     void inverseNumber() {
+
+        double expectedResult = 0.2;
+        int a = 5;
+
+        double actualResult = operation.inverseNumber(a);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+
     }
 
     @org.junit.jupiter.api.Test

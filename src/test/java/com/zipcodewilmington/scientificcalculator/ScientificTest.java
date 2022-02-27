@@ -163,7 +163,27 @@ class ScientificTest {
     }
 
     @Test
-    void changeTrigCycle() {
+    void changeTrigCycleTest1() {
+
+        boolean expectedResult = false;
+        boolean isRadian = true;
+
+        boolean actualResult = Scientific.changeTrigCycle(isRadian);
+
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    void changeTrigCycleTest2() {
+
+        boolean expectedResult = true;
+        boolean isRadian = false;
+
+        boolean actualResult = Scientific.changeTrigCycle(isRadian);
+
+        assertEquals(expectedResult, actualResult);
+
     }
 
     @Test

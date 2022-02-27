@@ -353,12 +353,4 @@ class ScientificTest {
         assertEquals(expectedResult, actualResult);
 
     }
-
-    @Test
-    void mAdd() {
-    }
-
-    @Test
-    void mSubtract() {
-    }
 }

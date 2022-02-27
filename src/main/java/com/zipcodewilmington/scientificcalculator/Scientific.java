@@ -3,7 +3,7 @@ package com.zipcodewilmington.scientificcalculator;
 import com.sun.org.apache.xpath.internal.objects.XNumber;
 
 public class Scientific {
-    public static double getSin(Boolean isRadian,double number){
+    public static double getSin(Boolean isRadian, double number){
         double radian=number;
         if (isRadian == false) {
             radian = Math.toRadians(number);

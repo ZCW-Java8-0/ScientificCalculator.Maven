@@ -4,15 +4,20 @@ package com.zipcodewilmington.scientificcalculator;
  * Created by leon on 2/9/18.
  */
 public class MainApplication {
-    static double d = 0;
-    static double e = 0;
-    static double result = 0;
-
+    static double d = 0, e = 0, result = 0, mStorage=0;
+    static Boolean isRadian= true;
     public static void main(String[] args) {
         Console.println("Welcome to my calculator!");
         Console.println("[+ for addition] [- for subtraction] [* for multiplication]");
         Console.println("[/ for division] [sq for square] [sqrt for square root]");
         Console.println("[exp for exponents] [1/N for inverse number] [-N for inverse sign]");
+        Console.println("Trig Function: sin, cos, tan, asin, acos, atan");
+        Console.println("Logarithm function: log, ln, log-1, ln-1");
+        Console.println("Memory Function: MS to store, MR for recall value, M+ to add to memory value");
+        Console.println("Memory Function: M- to subtract from memory value");
+        Console.println("! for Factorial, switchUnitsMode to change between radians and degrees");
+        Console.println("Radians to switch to radians, Degrees to switch to degrees");
+        Console.println("DisplayUnitsMode to check if in radians or degrees")
         Console.println("[Current for current number][Change to change current number][Clear for clear display] ");
         String s ="";
 
@@ -78,12 +83,92 @@ public class MainApplication {
                     d = result;
                     break;
                 //scientific methods
-                case "Current":
-                    currentNum();
+                case "MC":
+                    mStorage=0;
+                    break;
+                case "MS":
+                    mStorage=d;
+                    break;
+                case "M+":
+                    mStorage=Scientific.mAdd(mStorage,d);
+                    break;
+                case "M-":
+                    mStorage=Scientific.mSubtract(mStorage,d);
+                    break;
+                case "MR":
+                    d=mStorage;
+                    Console.println(Double.toString(result));
+                    break;
+                case "sin":
+                    result=Scientific.getSin(isRadian, d);
                     Console.println(Double.toString(result));
                     d = result;
                     break;
-                case "Change":
+                case "cos":
+                    result=Scientific.getCos(isRadian, d);
+                    Console.println(Double.toString(result));
+                    d = result;
+                    break;
+                case "tan":
+                    result=Scientific.getTan(isRadian, d);
+                    Console.println(Double.toString(result));
+                    d = result;
+                    break;
+                case "asin":
+                    result=Scientific.getaSin(isRadian, d);
+                    Console.println(Double.toString(result));
+                    d = result;
+                    break;
+                case "acos":
+                    result=Scientific.getaCos(isRadian, d);
+                    Console.println(Double.toString(result));
+                    d = result;
+                    break;
+                case "atan":
+                    result=Scientific.getaTan(isRadian, d);
+                    Console.println(Double.toString(result));
+                    d = result;
+                    break;
+                case "log":
+                    result=Scientific.getLog(d);
+                    Console.println(Double.toString(result));
+                    d = result;
+                    break;
+                case "ln":
+                    result=Scientific.getNaturalLog(d);
+                    Console.println(Double.toString(result));
+                    d = result;
+                    break;
+                case "log-1":
+                    result=Scientific.getInverseLog(d);
+                    Console.println(Double.toString(result));
+                    d = result;
+                    break;
+                case "ln-1":
+                    result=Scientific.getInverseNaturalLog(d);
+                    Console.println(Double.toString(result));
+                    d = result;
+                    break;
+                case "!":
+                    result=Scientific.getFactorial((int) d);
+                    Console.println(Double.toString(result));
+                    d = result;
+                    break;
+                case "Absolute Value":
+                    result=Scientific.getAbs(d);
+                    Console.println(Double.toString(result));
+                    d = result;
+                    break;
+                case "Cube":
+                    result=Scientific.cube(d);
+                    Console.println(Double.toString(result));
+                    d = result;
+                    break;
+                case "Current":
+                    currentNum();
+                    Console.println(Double.toString(d));
+                    break;
+                case "Change": //not sure if it does what is suppose to do
                     setNum(d);
                     Console.println(Double.toString(result));
                     d = result;
@@ -95,6 +180,19 @@ public class MainApplication {
                     break;
                 case "Off":
                     onOff = false;
+                    break;
+                case "switchUnitsMode":
+                    isRadian=Scientific.changeTrigCycle(isRadian);
+                    break;
+                case "Radians":
+                case "Degrees":
+                    isRadian=Scientific.changeTrig(isRadian,s);
+                    break;
+                case "DisplayUnitsMode":
+                    if (isRadian)
+                        Console.println("The calculator is set to Radians");
+                    else
+                        Console.println("The calculator is set to Degrees");
                     break;
                 default:
                     Console.println("Please pick a valid command");

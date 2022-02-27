@@ -211,7 +211,27 @@ class ScientificTest {
     }
 
     @Test
-    void getInverseLog() {
+    void getInverseLogTest1() {
+
+        double expectedResult = 100;
+        double number = 2;
+
+        double actualResult = Scientific.getInverseLog(number);
+
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    void getInverseLogTest2() {
+
+        double expectedResult = 3.1622776601683795;
+        double number = 0.5;
+
+        double actualResult = Scientific.getInverseLog(number);
+
+        assertEquals(expectedResult, actualResult);
+
     }
 
     @Test

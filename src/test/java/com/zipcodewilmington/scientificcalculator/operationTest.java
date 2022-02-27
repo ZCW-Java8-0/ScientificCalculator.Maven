@@ -59,11 +59,10 @@ class operationTest {
     @org.junit.jupiter.api.Test
     void square() {
 
-        double expectedResult = 19;
-        int a = 10;
-        int b = 9;
+        double expectedResult = 25;
+        int a = 5;
 
-        double actualResult = operation.addition(a,b);
+        double actualResult = operation.square(a);
 
         Assertions.assertEquals(expectedResult, actualResult);
 
@@ -71,10 +70,21 @@ class operationTest {
 
     @org.junit.jupiter.api.Test
     void squareRoot() {
+
+        double expectedResult = 10;
+        int a = 100;
+
+        double actualResult = operation.squareRoot(a);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+
     }
 
     @org.junit.jupiter.api.Test
     void exponents() {
+
+
+
     }
 
     @org.junit.jupiter.api.Test

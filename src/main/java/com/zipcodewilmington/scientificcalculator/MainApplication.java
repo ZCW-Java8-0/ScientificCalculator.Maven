@@ -6,7 +6,7 @@ package com.zipcodewilmington.scientificcalculator;
 public class MainApplication {
     public static double current = 0, mStorage=0;
     public static Boolean isRadian= true, onOff = true;
-    public static String operation = "";
+    public static String operation = "", displayType ="Decimal";
     public static void main(String[] args) {
         Console.println("Welcome to my calculator!");
         Console.println("[+ for addition] [- for subtraction] [* for multiplication]");
@@ -26,7 +26,7 @@ public class MainApplication {
             Console.println("The user input %s as the operation", operation);
             Reader.reader();
             if (onOff)
-                Console.println("Current:"+Double.toString(MainApplication.current));
+                Console.println("Current:"+Reader.display());
                 //escape if divide by 0
             }
         }

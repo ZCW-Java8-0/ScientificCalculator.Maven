@@ -35,9 +35,9 @@ class ScientificTest {
     @Test
     void getaSinTest1() {
 
-        double expectedResult = 0.1411200080598672;
-        double number = 3;
-        boolean isRadian = false;
+        double expectedResult = 0.5235987755982989;
+        double number = 0.5;
+        boolean isRadian = true;
 
         double actualResult = Scientific.getaSin(isRadian, number);
 
@@ -46,7 +46,20 @@ class ScientificTest {
     }
 
     @Test
-    void getCos() {
+    void getaSinTest2() {
+
+        double expectedResult = 1.5707963267948966;
+        double number = 1;
+        boolean isRadian = true;
+
+        double actualResult = Scientific.getaSin(isRadian, number);
+
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    void getCosTest1() {
     }
 
     @Test

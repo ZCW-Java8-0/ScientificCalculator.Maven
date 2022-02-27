@@ -107,5 +107,13 @@ class operationTest {
 
     @org.junit.jupiter.api.Test
     void inverseSign() {
+
+        double expectedResult = 7;
+        int a = -7;
+
+        double actualResult = operation.inverseSign(a);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+
     }
 }

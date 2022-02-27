@@ -187,11 +187,27 @@ class ScientificTest {
     }
 
     @Test
-    void changeTrig() {
+    void getLogTest1() {
+
+        double expectedResult = 1;
+        double number = 10;
+
+        double actualResult = Scientific.getLog(number);
+
+        assertEquals(expectedResult, actualResult);
+
     }
 
     @Test
-    void getLog() {
+    void getLogTest2() {
+
+        double expectedResult = 1.3979400086720377;
+        double number = 25;
+
+        double actualResult = Scientific.getLog(number);
+
+        assertEquals(expectedResult, actualResult);
+
     }
 
     @Test

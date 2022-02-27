@@ -6,7 +6,7 @@ package com.zipcodewilmington.scientificcalculator;
 public class MainApplication {
     public static double current = 0, mStorage=0;
     public static Boolean isRadian= true, onOff = true;
-    public static String operation = "", displayType ="Decimal";
+    public static String operation = "", displayType ="Binary";
     public static void main(String[] args) {
         Console.println("Welcome to my calculator!");
         Console.println("[+ for addition] [- for subtraction] [* for multiplication]");
@@ -19,6 +19,10 @@ public class MainApplication {
         Console.println("! for Factorial, switchUnitsMode to change between radians and degrees");
         Console.println("Radians to switch to radians, Degrees to switch to degrees");
         Console.println("DisplayUnitsMode to check if in radians or degrees");
+        Console.println("switchDisplayMode cycle Display mode between Binary, Octal, Decimal, and Hexadecimal");
+        Console.println("Typing the name of specific display type from above would change to that display mode");
+        Console.println("Note: Inputs should still be in decimal format");
+        Console.println("Use 'Current Display type' to check current display mode status");
         Console.println("[Current for current number][Change to change current number][Clear for clear display] ");
         current = Console.getDoubleInput("Enter initial number:");
         while (onOff) {

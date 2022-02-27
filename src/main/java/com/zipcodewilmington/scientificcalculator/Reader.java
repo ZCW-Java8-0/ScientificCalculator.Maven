@@ -120,6 +120,17 @@ public class Reader {
                 else
                     Console.println("The calculator is set to Degrees");
                 break;
+            case "switchDisplayMode":
+                Scientific.switchDisplayMode();
+                break;
+            case "Binary":
+            case "Octal":
+            case "Decimal":
+            case "Hexadecimal":
+                MainApplication.displayType = MainApplication.operation;
+                break;
+            case "Current Display type":
+                Console.println("Currently displaying in "+MainApplication.displayType);
             default:
                 Console.println("Please pick a valid command");
                 break;

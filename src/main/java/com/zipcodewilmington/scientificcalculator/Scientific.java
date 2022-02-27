@@ -1,5 +1,8 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import jdk.incubator.vector.VectorOperators;
+import jdk.tools.jmod.Main;
+
 public class Scientific {
     public static double getSin(Boolean isRadian, double number){
         double radian=number;
@@ -97,5 +100,21 @@ public class Scientific {
     }
     public static double mSubtract(double storeValue, double current){
         return storeValue-current;
+    }
+    public static void switchDisplayMode(){
+        switch (MainApplication.displayType) {
+            case "Binary":
+                MainApplication.displayType = "Octal";
+                break;
+            case "Octal":
+                MainApplication.displayType = "Decimal";
+                break;
+            case "Decimal":
+                MainApplication.displayType = "Hexadecimal";
+                break;
+            case "Hexadecimal":
+                MainApplication.displayType = "Binary";
+                break;
+        }
     }
 }

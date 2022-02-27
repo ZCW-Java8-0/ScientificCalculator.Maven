@@ -331,7 +331,27 @@ class ScientificTest {
     }
 
     @Test
-    void cube() {
+    void cubeTest1() {
+
+        double expectedResult = 27;
+        double number = 3;
+
+        double actualResult = Scientific.cube(number);
+
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    void cubeTest2() {
+
+        double expectedResult = 729;
+        double number = 9;
+
+        double actualResult = Scientific.cube(number);
+
+        assertEquals(expectedResult, actualResult);
+
     }
 
     @Test

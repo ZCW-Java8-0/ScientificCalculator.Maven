@@ -4,111 +4,34 @@ package com.zipcodewilmington.scientificcalculator;
  * Created by leon on 2/9/18.
  */
 public class MainApplication {
-    static double d = 0;
-    static double e = 0;
-    static double result = 0;
-
+    public static double current = 0, mStorage=0;
+    public static Boolean isRadian= true, onOff = true;
+    public static String operation = "", displayType ="Decimal";
     public static void main(String[] args) {
         Console.println("Welcome to my calculator!");
         Console.println("[+ for addition] [- for subtraction] [* for multiplication]");
         Console.println("[/ for division] [sq for square] [sqrt for square root]");
         Console.println("[exp for exponents] [1/N for inverse number] [-N for inverse sign]");
+        Console.println("Trig Function: sin, cos, tan, asin, acos, atan");
+        Console.println("Logarithm function: log, ln, log-1, ln-1");
+        Console.println("Memory Function: MS to store, MR for recall value, M+ to add to memory value");
+        Console.println("Memory Function: M- to subtract from memory value");
+        Console.println("! for Factorial, switchUnitsMode to change between radians and degrees");
+        Console.println("Radians to switch to radians, Degrees to switch to degrees");
+        Console.println("DisplayUnitsMode to check if in radians or degrees");
+        Console.println("switchDisplayMode cycle Display mode between Binary, Octal, Decimal, and Hexadecimal");
+        Console.println("Typing the name of specific display type from above would change to that display mode");
+        Console.println("Note: Inputs should still be in decimal format");
+        Console.println("Use 'Current Display type' to check current display mode status");
         Console.println("[Current for current number][Change to change current number][Clear for clear display] ");
-        String s ="";
-
-        boolean onOff = true;
-        d = Console.getDoubleInput("Enter first number:");
-        result = d;
+        current = Console.getDoubleInput("Enter initial number:");
         while (onOff) {
-            s = Console.getStringInput("Enter requested operation: ");
-            Console.println("The user input %s as the operation", s);
-            switch (s) {
-                case "+":
-                    e = Console.getDoubleInput("Enter second number:");
-                    result = operation.addition(d, e);
-                    Console.println(Double.toString(result));
-                    d = result;
-                    break;
-                case "-":
-                    e = Console.getDoubleInput("Enter second number:");
-                    result = operation.subtraction(d, e);
-                    Console.println(Double.toString(result));
-                    d = result;
-                    break;
-                case "*":
-                    e = Console.getDoubleInput("Enter second number:");
-                    result = operation.multiplication(d, e);
-                    Console.println(Double.toString(result));
-                    d = result;
-                    break;
-                case "/":
-                    e = Console.getDoubleInput("Enter second number:");
-                    if (e == 0) {
-                        Console.println("Err");
-                    } else {
-                        result = operation.divison(d, e);
-                        Console.println(Double.toString(result));
-                        d = result;
-                    }
-                    break;
-                case "sq":
-                    result = operation.square(d);
-                    Console.println(Double.toString(result));
-                    d = result;
-                    break;
-                case "sqrt":
-                    result = operation.squareRoot(d);
-                    Console.println(Double.toString(result));
-                    d = result;
-                    break;
-                case "exp":
-                    e = Console.getDoubleInput("Enter second number:");
-                    result = operation.exponents(d, e);
-                    Console.println(Double.toString(result));
-                    d = result;
-                    break;
-                case "1/N":
-                    result = operation.inverseNumber(d);
-                    Console.println(Double.toString(result));
-                    d = result;
-                    break;
-                case "-N":
-                    result = operation.inverseSign(d);
-                    Console.println(Double.toString(result));
-                    d = result;
-                    break;
-                //scientific methods
-                case "Current":
-                    currentNum();
-                    Console.println(Double.toString(result));
-                    d = result;
-                    break;
-                case "Change":
-                    setNum(d);
-                    Console.println(Double.toString(result));
-                    d = result;
-                    break;
-                case "Clear":
-                    result = 0;
-                    Console.println(Double.toString(result));
-                    d = Console.getDoubleInput("Enter new Number:");
-                    break;
-                case "Off":
-                    onOff = false;
-                    break;
-                default:
-                    Console.println("Please pick a valid command");
-                    break;
+            operation = Console.getStringInput("Enter requested operation: ");
+            Console.println("The user input %s as the operation", operation);
+            Reader.reader();
+            if (onOff)
+                Console.println("Current:"+Reader.display());
+                //escape if divide by 0
             }
-        }
-    }
-        // Set current number
-        public static double setNum(double input){
-        result = input;
-            return input;
-        }
-        // Current number
-        public static double currentNum(){
-        return result;
         }
     }

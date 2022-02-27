@@ -82,7 +82,7 @@ class operationTest {
     }
 
     @org.junit.jupiter.api.Test
-    void divison() {
+    void divisonTest1() {
 
         double expectedResult = 5;
         int a = 10;
@@ -95,7 +95,20 @@ class operationTest {
     }
 
     @org.junit.jupiter.api.Test
-    void square() {
+    void divisonTest2() {
+
+        double expectedResult = 0.15;
+        int a = 6;
+        int b = 40;
+
+        double actualResult = operation.divison(a,b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void squareTest1() {
 
         double expectedResult = 25;
         int a = 5;
@@ -107,7 +120,19 @@ class operationTest {
     }
 
     @org.junit.jupiter.api.Test
-    void squareRoot() {
+    void squareTest2() {
+
+        double expectedResult = 81;
+        int a = -9;
+
+        double actualResult = operation.square(a);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void squareRootTest1() {
 
         double expectedResult = 10;
         int a = 100;
@@ -119,7 +144,19 @@ class operationTest {
     }
 
     @org.junit.jupiter.api.Test
-    void exponents() {
+    void squareRootTest2() {
+
+        double expectedResult = 2;
+        int a = 4;
+
+        double actualResult = operation.squareRoot(a);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void exponentsTest1() {
 
         double expectedResult = 117649;
         int a = 7;
@@ -132,7 +169,20 @@ class operationTest {
     }
 
     @org.junit.jupiter.api.Test
-    void inverseNumber() {
+    void exponentsTest2() {
+
+        double expectedResult = -125;
+        int a = -5;
+        int b = 3;
+
+        double actualResult = operation.exponents(a,b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void inverseNumberTest1() {
 
         double expectedResult = 0.2;
         int a = 5;
@@ -144,10 +194,34 @@ class operationTest {
     }
 
     @org.junit.jupiter.api.Test
-    void inverseSign() {
+    void inverseNumberTest2() {
+
+        double expectedResult = -1.25;
+        double a = -0.8;
+
+        double actualResult = operation.inverseNumber(a);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void inverseSignTest1() {
 
         double expectedResult = 7;
         int a = -7;
+
+        double actualResult = operation.inverseSign(a);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void inverseSignTest2() {
+
+        double expectedResult = -67;
+        int a = 67;
 
         double actualResult = operation.inverseSign(a);
 

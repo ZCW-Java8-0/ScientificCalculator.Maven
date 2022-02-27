@@ -3,6 +3,7 @@ package com.zipcodewilmington.scientificcalculator;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+
 public class Scientific {
     public static double getSin(Boolean isRadian, double number){
         double radian=number;

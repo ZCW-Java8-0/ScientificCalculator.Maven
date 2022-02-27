@@ -283,7 +283,27 @@ class ScientificTest {
     }
 
     @Test
-    void getFactorial() {
+    void getFactorialTest1() {
+
+        int expectedResult = 120;
+        int number = 5;
+
+        int actualResult = Scientific.getFactorial(number);
+
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    void getFactorialTest2() {
+
+        int expectedResult = 2;
+        int number = 2;
+
+        int actualResult = Scientific.getFactorial(number);
+
+        assertEquals(expectedResult, actualResult);
+
     }
 
     @Test

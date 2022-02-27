@@ -32,14 +32,41 @@ class operationTest {
 
     @org.junit.jupiter.api.Test
     void multiplication() {
+
+        double expectedResult = 90;
+        int a = 10;
+        int b = 9;
+
+        double actualResult = operation.multiplication(a,b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+
     }
 
     @org.junit.jupiter.api.Test
     void divison() {
+
+        double expectedResult = 5;
+        int a = 10;
+        int b = 2;
+
+        double actualResult = operation.divison(a,b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+
     }
 
     @org.junit.jupiter.api.Test
     void square() {
+
+        double expectedResult = 19;
+        int a = 10;
+        int b = 9;
+
+        double actualResult = operation.addition(a,b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+
     }
 
     @org.junit.jupiter.api.Test

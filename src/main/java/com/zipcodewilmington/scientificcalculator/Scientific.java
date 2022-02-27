@@ -1,8 +1,5 @@
 package com.zipcodewilmington.scientificcalculator;
 
-import jdk.incubator.vector.VectorOperators;
-import jdk.tools.jmod.Main;
-
 public class Scientific {
     public static double getSin(Boolean isRadian, double number){
         double radian=number;
@@ -116,5 +113,12 @@ public class Scientific {
                 MainApplication.displayType = "Binary";
                 break;
         }
+    }
+    public static String changeBase(double number, int base){
+        String newNumber = "";
+        double storage = number%2;
+        while (storage!=0){
+        }
+        return newNumber;
     }
 }

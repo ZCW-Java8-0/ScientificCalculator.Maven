@@ -138,17 +138,19 @@ public class Reader {
     }
 
     public static String display() {
-        String number="";
+        String number = "";
         switch (MainApplication.displayType) {
             case "Binary":
+                number = Scientific.changeBase(MainApplication.current, 2);
                 break;
             case "Octal":
+                number = Scientific.changeBase(MainApplication.current, 8);
                 break;
             case "Decimal":
-                number=Double.toString(MainApplication.current);
+                number = Double.toString(MainApplication.current);
                 break;
             case "Hexadecimal":
-                number=Double.toHexString(MainApplication.current);
+                number = Double.toHexString(MainApplication.current);
                 break;
         }
         return number;

@@ -235,7 +235,27 @@ class ScientificTest {
     }
 
     @Test
-    void getNaturalLog() {
+    void getNaturalLogTest1() {
+
+        double expectedResult = 2.0794415416798357;
+        double number = 8;
+
+        double actualResult = Scientific.getNaturalLog(number);
+
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    void getNaturalLogTest2() {
+
+        double expectedResult = 3.5263605246161616;
+        double number = 34;
+
+        double actualResult = Scientific.getNaturalLog(number);
+
+        assertEquals(expectedResult, actualResult);
+
     }
 
     @Test

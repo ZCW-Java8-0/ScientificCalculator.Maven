@@ -259,7 +259,27 @@ class ScientificTest {
     }
 
     @Test
-    void getInverseNaturalLog() {
+    void getInverseNaturalLogTest1() {
+
+        double expectedResult = 2.718281828459045;
+        double number = 1;
+
+        double actualResult = Scientific.getInverseNaturalLog(number);
+
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    void getInverseNaturalLogTest2() {
+
+        double expectedResult = 2980.9579870417283;
+        double number = 8;
+
+        double actualResult = Scientific.getInverseNaturalLog(number);
+
+        assertEquals(expectedResult, actualResult);
+
     }
 
     @Test

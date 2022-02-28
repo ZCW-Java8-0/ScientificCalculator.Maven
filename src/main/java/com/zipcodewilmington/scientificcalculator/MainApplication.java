@@ -1,7 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
 /**
- * Author: Jason Lee, Joesph Kowalski, Wei Zheng
+ * Author: Jason Lee, Joseph Kowalski, Wei Zheng
  */
 public class MainApplication {
     public static double current = 0, mStorage=0;

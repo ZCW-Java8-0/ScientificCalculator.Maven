@@ -14,7 +14,7 @@ public class MainApplication {
         Console.println("[exp for exponents] [1/N for inverse number] [-N for inverse sign]");
         Console.println("Trig Function: sin, cos, tan, asin, acos, atan");
         Console.println("Logarithm function: log, ln, log-1, ln-1");
-        Console.println("Memory Function: MS to store, MR for recall value, M+ to add to memory value");
+        Console.println("Memory Function: MS to store, MR for recall value, M+ to add from memory value");
         Console.println("Memory Function: M- to subtract from memory value");
         Console.println("! for Factorial, switchUnitsMode to change between radians and degrees");
         Console.println("Radians to switch to radians, Degrees to switch to degrees");

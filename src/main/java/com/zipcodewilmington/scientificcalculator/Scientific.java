@@ -119,7 +119,7 @@ public class Scientific {
         }
     }
     public static String changeBase(double number, int base){
-        int prec =100;
+        int prec = 100;
         //how far past the decimal point the program calculates to.
         BigDecimal bdnumber = new BigDecimal(number);
         BigDecimal baseMultiplier = new BigDecimal(base).pow(prec);

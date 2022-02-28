@@ -6,39 +6,40 @@ public class Reader {
         switch (MainApplication.operation) {
             case "+":
                 second = Console.getDoubleInput("Enter second number:");
-                MainApplication.current = operation.addition(MainApplication.current, second);
+                MainApplication.current = Operation.addition(MainApplication.current, second);
                 break;
             case "-":
                 second = Console.getDoubleInput("Enter second number:");
-                MainApplication.current = operation.subtraction(MainApplication.current, second);
+                MainApplication.current = Operation.subtraction(MainApplication.current, second);
                 break;
             case "*":
                 second = Console.getDoubleInput("Enter second number:");
-                MainApplication.current = operation.multiplication(MainApplication.current, second);
+                MainApplication.current = Operation.multiplication(MainApplication.current, second);
                 break;
             case "/":
                 second = Console.getDoubleInput("Enter second number:");
                 if (second == 0) {
                     Console.println("Err");
-                    MainApplication.onOff = false;
+                    MainApplication.operation = "Clear";
+                    Reader.reader();
                 } else
-                    MainApplication.current = operation.divison(MainApplication.current, second);
+                    MainApplication.current = Operation.divison(MainApplication.current, second);
                 break;
             case "sq":
-                MainApplication.current = operation.square(MainApplication.current);
+                MainApplication.current = Operation.square(MainApplication.current);
                 break;
             case "sqrt":
-                MainApplication.current = operation.squareRoot(MainApplication.current);
+                MainApplication.current = Operation.squareRoot(MainApplication.current);
                 break;
             case "exp":
                 second = Console.getDoubleInput("Enter second number:");
-                MainApplication.current = operation.exponents(MainApplication.current, second);
+                MainApplication.current = Operation.exponents(MainApplication.current, second);
                 break;
             case "1/N":
-                MainApplication.current = operation.inverseNumber(MainApplication.current);
+                MainApplication.current = Operation.inverseNumber(MainApplication.current);
                 break;
             case "-N":
-                MainApplication.current = operation.inverseSign(MainApplication.current);
+                MainApplication.current = Operation.inverseSign(MainApplication.current);
                 break;
             //scientific methods
             case "MC":
@@ -102,7 +103,7 @@ public class Reader {
                 break;
             case "Clear":
                 MainApplication.current = 0;
-                MainApplication.current = Console.getDoubleInput("Enter new Number:");
+                MainApplication.current = Console.getDoubleInput("Cleared! Enter new initial Number:");
                 break;
             case "Off":
                 MainApplication.onOff = false;
@@ -131,6 +132,7 @@ public class Reader {
                 break;
             case "Current Display type":
                 Console.println("Currently displaying in "+MainApplication.displayType);
+                break;
             default:
                 Console.println("Please pick a valid command");
                 break;

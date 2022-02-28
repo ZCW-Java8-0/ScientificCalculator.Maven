@@ -1,7 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
 /**
- * Created by leon on 2/9/18.
+ * Author: Jason Lee, Joesph Kowalski, Wei Zheng
  */
 public class MainApplication {
     public static double current = 0, mStorage=0;
@@ -24,14 +24,13 @@ public class MainApplication {
         Console.println("Note: Inputs should still be in decimal format");
         Console.println("Use 'Current Display type' to check current display mode status");
         Console.println("[Current for current number][Change to change current number][Clear for clear display] ");
+        Console.println("[Off to turn calculator off]");
         current = Console.getDoubleInput("Enter initial number:");
         while (onOff) {
             operation = Console.getStringInput("Enter requested operation: ");
             Console.println("The user input %s as the operation", operation);
             Reader.reader();
-            if (onOff)
-                Console.println("Current:"+Reader.display());
-                //escape if divide by 0
+            Console.println("Current:"+Reader.display());
             }
         }
     }

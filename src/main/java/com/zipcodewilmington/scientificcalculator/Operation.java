@@ -1,6 +1,6 @@
 package com.zipcodewilmington.scientificcalculator;
 
-public class operation {
+public class Operation {
 // START OF BASIC OPERATIONS
     public static double addition(double a, double b) {
         double sum = a + b;

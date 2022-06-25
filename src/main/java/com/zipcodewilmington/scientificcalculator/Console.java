@@ -22,11 +22,15 @@ public class Console {
         return userInput;
     }
 
-    public static Integer getIntegerInput(String prompt) {
-        return null;
-    }
-
-    public static Double getDoubleInput(String prompt) {
-        return null;
-    }
+    public static double getDoubleInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        while(!scanner.hasNextDouble()) {
+            System.out.println("Invalid Number, enter valid number");
+            scanner = new Scanner(System.in);
+        }
+            double userInput = scanner.nextDouble();
+            return userInput;
+        }
+//added
 }
